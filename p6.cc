@@ -6,7 +6,6 @@
 #include "ns3/applications-module.h"
 #include "ns3/network-module.h"
 #include "ns3/packet-sink.h"
-//step1: add the following header files
 #include "ns3/flow-monitor.h"
 #include "ns3/flow-monitor-helper.h"
 #include "ns3/traffic-control-module.h"
@@ -70,5 +69,6 @@ flowMonitor->SerializeToXmlFile("p16.xml", true, true);
  Ptr<PacketSink> sink1 = DynamicCast<PacketSink> (sinkApps.Get (0));
   std::cout << "Total Bytes Received: " << sink1->GetTotalRx () << std::endl;
 }
+
 
 
