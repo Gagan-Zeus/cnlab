@@ -12,7 +12,7 @@ NS_LOG_COMPONENT_DEFINE ("Star");
 
 int 
 main (int argc, char *argv[])
-{
+{ 
 
   Config::SetDefault ("ns3::OnOffApplication::PacketSize", UintegerValue (137));
 
