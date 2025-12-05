@@ -48,8 +48,7 @@ int main (int argc, char *argv[])
   ApplicationContainer sinkApps = sink.Install (nodes.Get (1));
   sinkApps.Start (Seconds (0.0));
   sinkApps.Stop (Seconds (10.0));
-
-//step2: add the following code for  Flow monitor
+
 Ptr<FlowMonitor> flowMonitor;
 FlowMonitorHelper flowHelper;
 flowMonitor = flowHelper.InstallAll();
@@ -60,8 +59,7 @@ flowMonitor = flowHelper.InstallAll();
     
   Simulator::Stop (Seconds (10.0));
   Simulator::Run ();
-
-//step 3: add the following statement for xml file
+
 flowMonitor->SerializeToXmlFile("p16.xml", true, true);
 
   Simulator::Destroy ();
